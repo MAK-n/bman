@@ -28,7 +28,7 @@ module.exports = function (message) {
         message.channel.send('Kisko karna hai?')
     }
     else if (kisko == message.author.username) {
-        message.reply("somebody give this guy a hug")
+        message.channel.send("somebody give this guy a hug :catsock:")
     }
     else {
         const h = new Discord.MessageEmbed()
