@@ -37,3 +37,4 @@ client.on('guildMemberAdd', member => {
 });
 
 client.login(token);
+//dasdasda
