@@ -4,7 +4,11 @@ module.exports = function (message) {
         const avatar = new Discord.MessageEmbed()
             .setTitle(ping.username + "'s avatar")
             .setColor("#FF0000")
-            .setImage(ping.displayAvatarURL())
+            .setImage(ping.displayAvatarURL({
+                dynamic: true,
+                format: "png",
+                size: 512
+            }))
 
         message.reply(avatar)
     }
@@ -12,7 +16,11 @@ module.exports = function (message) {
         const avatar = new Discord.MessageEmbed()
             .setTitle(message.author.username + "'s avatar")
             .setColor("#FF0000")
-            .setImage(message.author.displayAvatarURL())
+            .setImage(message.author.displayAvatarURL({
+                dynamic: true,
+                format: "png",
+                size: 512
+            }))
 
         message.reply(avatar)
     }
