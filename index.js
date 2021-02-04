@@ -11,6 +11,9 @@ let kick= require('./kick')
 let ban= require('./ban')
 let cf = require("./coinflip")
 let clear = require('./clear')
+let ks = require("./ks")
+let hr = require("./homierate")
+let ss = require("./sauce")
 
 //      start
 client.on("ready", () => {
@@ -18,15 +21,18 @@ client.on("ready", () => {
     client.user.setActivity({ name: 'B' }, { type: 1 })
 })
 
-client.on('message',message =>{
+client.on('message',message =>{      
+    message.content= message.content.toLowerCase()    
     if (!message.content.startsWith(prefix)) return;
-    message.content= message.content.toLowerCase()
-    if (message.content.startsWith(`${prefix}hug`)) h(message)
+    if (message.content.startsWith(`${prefix}hug`)|| message.content.startsWith(`${prefix}cuddle`)|| message.content.startsWith(`${prefix}homiehug`)) h(message)
     else if (message.content.startsWith(`${prefix}avatar`) || message.content.startsWith(`${prefix}av`)) av(message)
     else if (message.content.startsWith(`${prefix}kick`)) kick(message)
     else if (message.content.startsWith(`${prefix}ban`)) ban(message)
     else if (message.content == `${prefix}coinflip` || message.content == `${prefix}cf`) cf(message)
     else if (message.content.startsWith(`${prefix}clear`)) clear(message,prefix)
+    else if (message.content.startsWith(`${prefix}kiss`)) ks(message)
+    else if (message.content.startsWith(`${prefix}homierate`)||message.content.startsWith(`${prefix}howhomie`)) hr(message)
+    else if (message.content.startsWith(`${prefix}sauce`)) ss(message)
 })
 
 //    svr join greeting    
