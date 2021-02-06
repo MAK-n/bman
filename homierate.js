@@ -9,7 +9,7 @@ module.exports = function (message) {
 
 
     if (kisko == undefined) {
-        if (authid==581060730522959872 || authid == "454953209170100224" || authid == "335996880096067584" || authid == "602412289605500957") {
+        if (authid=="581060730522959872" || authid == "454953209170100224" || authid == "335996880096067584" || authid == "602412289605500957") {
             const h = new Discord.MessageEmbed()
                 .setTitle(`${message.author.username} is 100% Homie`)
                 .setColor('#FF0000')
